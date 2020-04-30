@@ -6,6 +6,8 @@ var chunkSize = 1000;
 var processedRecords = 0;
 
 async function getAllResponses() {
+  // reset the responses each time
+  responseArr = [];
   logger.info("smsResponsesHandler", "running task", "");
 
   let promise = new Promise((resolve, reject) => {
