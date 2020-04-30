@@ -5,13 +5,14 @@ var responseArr = [];
 var chunkSize = 1000;
 var processedRecords = 0;
 
-async function saveAllResponses() {
+async function saveAllResponses(myData) {
   logger.info("smsResponsesHandler", "running task", "");
 
   let promise = new Promise((resolve, reject) => {
     var dbResult = smsresponses.saveAllSMSResponses(
       processResponseChunk,
-      chunkSize
+      chunkSize,
+      myData
     );
 
     // Iterate through the users

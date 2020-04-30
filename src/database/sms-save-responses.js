@@ -3,7 +3,7 @@ var Cursor = require("pg-cursor");
 var pg = require("pg");
 var logger = require("../logger");
 
-   async function saveAllResponses (chunkCallBack, chunkSize) {
+   async function saveAllResponses (chunkCallBack, chunkSize, myData) {
     return new Promise(function (resolve, reject) {
 
       var pool = new pg.Pool(configuration.PG_CONFIG);
@@ -15,12 +15,12 @@ var logger = require("../logger");
           logger.error("smsResponse.getAllUsers", "DB connect error", err);
           reject(err);
         }
-
-        var queryText = "INSERT INTO sms_responses values (default, 1, '{}')";
+        console.log("{{{{{{{{{{{{{{{{{{{--->" + myData);
+        var queryText = "INSERT INTO sms_responses values (default, 2, '" + myData + "')";
 
         var cursor = client.query(new Cursor(queryText));
 
-console.log("+++++++++++++++++++++++" +req);
+//console.log("+++++++++++++++++++++++" +req);
 
         // Start cursor recursion
         getNextChunk(resolve, reject, cursor, done, chunkSize, chunkCallBack);

@@ -8,7 +8,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "teslajs": "^4.7.7"
+    "teslajs": "^4.7.7",
+    "body-parser": "1.19.0"
   },
   "scripts": {
     "server": "node ./src/server/server.js"
