@@ -1,0 +1,36 @@
+{
+  "name": "Jessica-Rabbit",
+  "description": "Card automation for myWebRoom.",
+  "website": "http://www.mywebroom.com/",
+  "repository": "https://github.com/myWebRoom/card-automation",
+  "logo": "https://github.com/myWebRoom/card-automation/blob/master/assets/jessica.png?raw=true",
+  "addons": ["scheduler:standard", "papertrail:choklad"],
+  "env": {
+    "API_ENDPOINT": {
+      "description": "The myWebRoom end-point to use. Example: http://[environment].mywebroom.com/api/v2/"
+    },
+    "QUEUES_ARTICLES": {
+    "description": "The place where we queue articles: Example: [environment]-mywebroom.source.articles"
+    },
+    "QUEUES_RSS": {
+      "description": "The place where we queue rss sources: Example: [environment]-mywebroom.extract-url-from-rss"
+    },
+    "QUEUES_IMPORTIO": {
+      "description": "The place where we queue import.io sources: Example: [environment]-mywebroom.extract-url-from-import-io"
+    },
+    "QUEUES_IMPORTIO_DESKTOP": {
+      "description": "The place where we queue import.io sources: Example: [environment]-mywebroom.extract-url-from-import-io-desktop"
+    },
+    "RABBITMQ_URL": {
+      "description": "The url of our RabbitMQ",
+      "value": "amqp://khvedixz:56Hkd-1st1Y0zoo5ms8ryWNV89jsCPfW@owl.rmq.cloudamqp.com/khvedixz"
+    },
+    "SOURCES_LIMIT": {
+      "description": "The amout of sources to process in one request.",
+      "value": "50"
+    },
+    "IMPORT_IO_API_KEY": {
+      "description": "The import.io api key for api access."
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "sms-db",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "pg": "^8.0.3",
+    "pg-cursor": "^2.1.10",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "teslajs": "^4.7.7"
+  },
+  "scripts": {
+    "server": "node ./src/server/server.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.9.4",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
